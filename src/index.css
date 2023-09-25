@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poiret+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-white: #FFFFFF;
+  --clr-black: #000000;
+  --clr-grey: #2b2727;
+  --clr-grey-2: #2b2727;
+
+  --clr-blue: rgb(35, 89, 226);
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #272626;
+  
+}
+
+
+/* -- NAVIGATION -- */
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  background-color: #292727;
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  padding: 0 75px;
+  grid-column: 1 / span 3;
+  margin: 20px 50px;
+  height: 65px;
+}
+
+.nav__brand h1 {
+  font-family: "open sans";
+  font-size: 2.50em;
+  color: var(--clr-blue);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  margin-left: 50px;
+}
+
+.nav__links li {
+  height: 80%;
+  min-width: 80px;
+  margin: 20px;
+}
+
+.nav__links li a {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0 10px;
+  color: var(--clr-blue);
+  font-weight: 1000;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.nav__links li a:hover {
+  background-color: var(--clr-blue);
+  color: white;
+}
+
+.nav__connect {
+  width: 175px;
+  height: 50px;
+  margin: 0 75px 0 auto;
+  background: none;
+  color: var(--clr-blue);
+  border: 2px solid ;
+  border-radius: 8px;
+  font-family: "Open Sans";
+  font-size: 1.10em;
+  font-weight: 600;
+  cursor: pointer;
+  transition:  1.5s ease;
+}
+
+.nav__connect:hover {
+  background-color: var(--clr-blue);
+  border: none;
+  color: white;
+}
+
+
+/* ------------------------------------------------------ */
+/* -- CARDS -- */
+
+.card {
+  align-items: center;
+  width: 95%;
+  max-width: 850px;
+  height: 75px;
+  margin-top: 50px;
+  margin-left: 325px;
+  position: relative;
+  transition: all 250ms ease;
+  color: white;
+
+}
+
+.card__info {
+  display: grid;
+  background-color: #383737;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr); 
+  height: 100%;
+  padding: 20px;
+  text-align: left;
+  transition: 1s ease;
+  border-radius: 10px;
+  border: none;
+}
+
+.card__info:hover {
+  border: 1px solid var(--clr-blue);
+  border-radius: 10px;
+}
+
+
+.card__info p small {
+  font-size: clamp(0.80rem, 2vw, 0.90rem);
+}
+
+.card__info p small span {
+  font-weight: 700;
+}
+
+.card__date {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  place-self: center;
+
+  font-size: clamp(0.95rem, 3vw, 1.15rem);
+  font-weight: 300;
+}
+
+.card__name {
+  grid-column: 3 / span 6;
+  grid-row: 1;
+  place-self: center;
+  align-self: end;
+
+  font-family: "Open Sans";
+  font-size: clamp(0.90rem, 3vw, 1.10rem);
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.card__location {
+  grid-column: 3 / span 6;
+  grid-row: 2;
+  place-self: center;
+  align-self: start;
+
+  font-size: 1.15rem;
+  font-weight: 300;
+
+  text-align: center;
+}
+
+.card__cost {
+  grid-column: 9 / span 1;
+  grid-row: 1 / span 2;
+  place-self: center;
+
+  font-size: clamp(1rem, 3vw, 1.10rem);
+  font-weight: 300;
+}
+
+.card__cost strong {
+  font-family: "Open Sans";
+  font-size: clamp(1.10rem, 3vw, 1.50rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.card__ticket{
+  grid-column: 10 / span 1;
+  grid-row: 1 / span 2;
+  place-self: center;
+  margin: 0 50px;
+
+  font-size: clamp(1rem, 3vw, 1.10rem);
+  font-weight: 300;
+}
+
+.card__ticket strong {
+  font-family: "Open Sans";
+  font-size: clamp(1.10rem, 3vw, 1.50rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+
+
+.card__button,
+.card__button--out {
+  grid-column: 11 / span 3;
+  grid-row: 1 / span 2;
+  place-self: center;
+
+  width: 125px;
+  height: 40px;
+
+  background-color: var(--clr-blue);
+  color: var(--clr-white);
+
+  margin-left: auto;
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Open Sans";
+  font-size: 1em;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.card__button:hover {
+  border: 2px solid var(--clr-blue);
+  background: none;
+  color: var(--clr-blue);
+}
+
+
+.card__button--out {
+  background-color: #BA1840;
+}
+
+.card hr {
+  margin-top: 15px;
+}
+
